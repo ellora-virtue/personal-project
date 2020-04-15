@@ -1,0 +1,10 @@
+body {
+  font-family: 'Girassol', cursive;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-image: url('./images/stainedBackground.jpg');
+  background-repeat: repeat-y;
+  background-size: cover;
+}
