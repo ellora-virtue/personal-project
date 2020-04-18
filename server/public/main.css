@@ -17,3 +17,13 @@ body {
 .instructions {
   font-size: 20px;
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.innerCont {
+  flex-direction: column;
+  text-align: left;
+}
