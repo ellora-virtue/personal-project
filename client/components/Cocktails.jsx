@@ -7,7 +7,6 @@ const cocktail = 'margarita'
 
 const imgStyle = {
   width: '400px',
-  marginTop: '20px',
   marginBottom: '20px'
 }
 
@@ -47,7 +46,9 @@ class Cocktails extends React.Component {
       <>
         <div><h1>{this.state.name}</h1></div>
         <div className='container'>
-          <img src={this.state.image} style={imgStyle} alt={`image of a ${this.state.name}`} />
+          <div className='image'>
+            <img src={this.state.image} style={imgStyle} alt={`image of a ${this.state.name}`} />
+          </div>
           <div className='innerCont'>
             <div className='ingredients'>
               <span id='title'>Ingredients: </span>
@@ -65,7 +66,7 @@ class Cocktails extends React.Component {
             </div>
             <div className='instructions'>
               <span id='title'>Instructions: </span>
-              <div>{this.state.instructions}</div>
+              <div className='inner'>{this.state.instructions}</div>
             </div>
           </div>
         </div>

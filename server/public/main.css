@@ -9,6 +9,22 @@ body {
   background-size: cover;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.image {
+  width: 30%;
+}
+
+.innerCont {
+  flex-direction: column;
+  text-align: left;
+  margin-left: 20px;
+  width: 70%;
+}
+
 #title {
   font-size: 30px;
   margin-bottom: 15px;
@@ -16,14 +32,9 @@ body {
 
 .instructions {
   font-size: 20px;
+  margin-top: 50px;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
-.innerCont {
-  flex-direction: column;
-  text-align: left;
+.instructions .inner {
+  width: 70%;
 }
