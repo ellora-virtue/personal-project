@@ -1,4 +1,6 @@
 import React from 'react'
+// import { Route } from 'react-router-dom'
+
 import Cocktails from './Cocktails'
 
 const apiUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
@@ -34,22 +36,31 @@ class Search extends React.Component {
     }
   }
 
+  randomCocktail = () => {
+
+  }
+
   render () {
-    console.log(this.state.drinks)
     return (
-      <>
+      <div className='searchContainer'>
         <h1>What's your favourite cocktail?</h1>
         <div className='search'>
           <input className='input'
             onKeyPress={this.handleKeyPress}
             onChange={this.updateQuery}
-          />
+          /><br></br>
           <button className='button' onClick={this.searchCocktails}>
             GO
           </button>
-          <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
         </div>
-      </>
+        <div className='random'>
+          <button onClick={this.randomCocktail}>
+            RANDOM COCKTAIL
+          </button>
+        </div>
+        <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
+        {/* <Route exact path={`/${this.state.cocktail}`} component={Cocktails} cocktail={this.state.cocktail} drinks={this.state.drinks} /> */}
+      </div>
     )
   }
 }

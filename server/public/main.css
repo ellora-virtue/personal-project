@@ -9,11 +9,12 @@ body {
   background-size: cover;
 }
 
+/* Styles cocktail page */
 .container {
   display: flex;
   flex-direction: row;
-  position: relative;
-  z-index: 0;
+  width: 100%;
+  justify-content: center;
 }
 
 .image {
@@ -44,4 +45,26 @@ body {
 
 .instructions .inner {
   width: 70%;
+}
+
+/* Styles search bar */
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.searchContainer input {
+  width: 50%;
+  padding: 10px 10px;
+  font-size: 20px;
+  margin: 15px;
+  background-color: black;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  color: white;
+  text-align: center;
+  font-family: 'Girassol', cursive;
 }
