@@ -37,7 +37,7 @@ class Search extends React.Component {
   }
 
   randomCocktail = () => {
-
+    
   }
 
   render () {

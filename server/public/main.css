@@ -55,11 +55,11 @@ body {
 }
 
 .searchContainer input {
-  width: 13em;
+  width: 10em;
   padding: 5px 10px;
   font-size: 25px;
   margin: 15px;
-  background-color: black;
+  background-color: #000000;
   box-sizing: border-box;
   border: none;
   border-radius: 5px;
@@ -67,6 +67,11 @@ body {
   color: white;
   text-align: center;
   font-family: 'Girassol', cursive;
+  transition: width 0.4s ease-in-out;
+}
+
+.searchContainer input:focus {
+  width: 15em;
 }
 
 .searchContainer button {
