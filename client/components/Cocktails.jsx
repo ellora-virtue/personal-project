@@ -83,7 +83,7 @@ class Cocktails extends React.Component {
                   if (ingredient[0] !== null && ingredient[1] !== null) {
                     return (
                       <li key={idx}>
-                        {ingredient[1]} {'   '} {ingredient[0]}
+                        {ingredient[1]} {' '} {ingredient[0]}
                       </li>
                     )
                   }
