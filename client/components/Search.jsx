@@ -47,6 +47,7 @@ class Search extends React.Component { // 'React.'?
           <button className='button' onClick={this.searchCocktails}>
             GO
           </button>
+          <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
         </div>
       </>
     )
