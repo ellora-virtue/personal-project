@@ -55,9 +55,9 @@ body {
 }
 
 .searchContainer input {
-  width: 50%;
-  padding: 10px 10px;
-  font-size: 20px;
+  width: 13em;
+  padding: 5px 10px;
+  font-size: 25px;
   margin: 15px;
   background-color: black;
   box-sizing: border-box;
@@ -86,12 +86,12 @@ body {
 }
 
 .search button {
-  width: 17%;
+  width: 4em;
   font-size: 20px;
 }
 
 .random button {
-  width: 50%;
+  width: 15em;
   height: auto;
   font-size: 18px;
 }
