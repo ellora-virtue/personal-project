@@ -80,10 +80,10 @@ class Cocktails extends React.Component {
               <span id='title'>Ingredients: </span>
               <ul>
                 {ingredients.map((ingredient, idx) => {
-                  if (ingredient[0] !== null && ingredient[1] !== null) {
+                  if (ingredient[0] !== null || ingredient[1] !== null) {
                     return (
                       <li key={idx}>
-                        {ingredient[1]} {' '} {ingredient[0]}
+                        {ingredient[1]} {'   '} {ingredient[0]}
                       </li>
                     )
                   }
