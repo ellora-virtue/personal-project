@@ -2,13 +2,8 @@ import React from 'react'
 import request from 'superagent'
 
 // Cocktail API end point
-const apiUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php'
+const apiUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 const cocktail = 'margarita'
-
-const imgStyle = {
-  width: '400px',
-  marginBottom: '20px'
-}
 
 // strDrink, strIngredient1, strIngredient2, strIngredient3, strIngredient4,strInstructions, strDrinkThumb
 
@@ -47,7 +42,7 @@ class Cocktails extends React.Component {
         <div><h1>{this.state.name}</h1></div>
         <div className='container'>
           <div className='image'>
-            <img src={this.state.image} style={imgStyle} alt={`image of a ${this.state.name}`} />
+            <img src={this.state.image} alt={`image of a ${this.state.name}`} />
           </div>
           <div className='innerCont'>
             <div className='ingredients'>

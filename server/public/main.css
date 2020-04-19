@@ -18,6 +18,11 @@ body {
   width: 30%;
 }
 
+.image img {
+  width: 400px;
+  margin-bottom: 20px
+}
+
 .innerCont {
   flex-direction: column;
   text-align: left;
