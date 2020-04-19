@@ -3,7 +3,7 @@ import Cocktails from './Cocktails'
 
 const apiUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 
-class Search extends React.Component { // 'React.'?
+class Search extends React.Component {
   state = {
     query: '',
     drinks: [],
