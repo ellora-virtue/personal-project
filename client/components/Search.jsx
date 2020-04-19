@@ -54,8 +54,9 @@ class Search extends React.Component {
           </button>
         </div>
         <div className='random'>
+          <h3>Or...</h3>
           <button onClick={this.randomCocktail}>
-            RANDOM COCKTAIL
+            GET RANDOM COCKTAIL
           </button>
         </div>
         <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />

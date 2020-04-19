@@ -68,3 +68,30 @@ body {
   text-align: center;
   font-family: 'Girassol', cursive;
 }
+
+.searchContainer button {
+  font-family: 'Girassol', cursive;
+  background-color: #000000;
+  color: #c8ac7b;
+  border: none;
+  border-radius: 2px;
+  padding: 8px 5px;
+}
+
+.searchContainer button:hover {
+  background-color: #c8ac7b;
+  color: #000000;
+  cursor: pointer;
+  border: 1px solid #000000;
+}
+
+.search button {
+  width: 17%;
+  font-size: 20px;
+}
+
+.random button {
+  width: 50%;
+  height: auto;
+  font-size: 18px;
+}
