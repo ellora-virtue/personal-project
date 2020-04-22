@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
 import Cocktails from './Cocktails'
 
@@ -50,25 +50,31 @@ class Search extends React.Component {
 
   render () {
     return (
-      <div className='searchContainer'>
-        <h1>What's your favourite cocktail?</h1>
-        <div className='search'>
-          <input className='input'
-            onKeyPress={this.handleKeyPress}
-            onChange={this.updateQuery}
-          /><br></br>
-          <button className='button' onClick={this.searchCocktails}>
+      <div className='container'>
+        <div className='searchContainer'>
+          <h1>What's your favourite cocktail?</h1>
+          <div className='search'>
+            <input className='input'
+              onKeyPress={this.handleKeyPress}
+              onChange={this.updateQuery}
+            /><br></br>
+            <button className='button' onClick={this.searchCocktails}>
             GO
-          </button>
-        </div>
-        <div className='random'>
-          <h3>Or...</h3>
-          <button onClick={this.randomCocktail}>
+            </button>
+          </div>
+          <div className='random'>
+            <h3>Or...</h3>
+            <button onClick={this.randomCocktail}>
             GET RANDOM COCKTAIL
-          </button>
+            </button>
+          </div>
+          <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
+          {/* <Route
+          exact path='/cocktail'
+          render={(state) =>
+            <Cocktails {...state} cocktail={this.state.cocktail} />}
+        /> */}
         </div>
-        <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
-        {/* <Route exact path={`/${this.state.cocktail}`} component={Cocktails} cocktail={this.state.cocktail} drinks={this.state.drinks} /> */}
       </div>
     )
   }
