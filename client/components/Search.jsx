@@ -37,7 +37,15 @@ class Search extends React.Component {
   }
 
   randomCocktail = () => {
-    
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
+      .then(res => res.json())
+      .then(json => {
+        if (json.drinks.length > 0) {
+          const cocktail = json.drinks[0]
+          this.setState({ cocktail: cocktail, drinks: json.drinks })
+        }
+      })
+      .catch(error => console.log(error.message))
   }
 
   render () {
