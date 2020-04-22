@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+import swal from '@sweetalert/with-react'
 
 import Cocktails from './Cocktails'
 
@@ -22,14 +22,16 @@ class Search extends React.Component {
     fetch(`${apiUrl}${this.state.query}`)
       .then(res => res.json())
       .then(json => {
-        console.log(json.drinks)
-        if (json.drinks.length > 0) {
+        if (json.drinks === null) {
+          swal({
+            title: 'Oh no!',
+            text: 'Sorry, we couldn\'t find that cocktail.',
+            icon: 'warning',
+            button: 'Try again?',
+            className: 'alert'
+          })
+        } else if (json.drinks.length > 0) {
           const cocktail = json.drinks[0]
-          this.setState({ cocktail: cocktail, drinks: json.drinks })
-        } else if (json.drinks.length === 0) {
-          const cocktail = {
-            name: 'No such cocktail!'
-          }
           this.setState({ cocktail: cocktail, drinks: json.drinks })
         }
       })
