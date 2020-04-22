@@ -6,10 +6,10 @@ import Search from './Search'
 
 const App = () => {
   return (
-    <>
+    <div className='container'>
       <Title />
       <Search />
-    </>
+    </div>
   )
 }
 

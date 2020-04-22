@@ -22,8 +22,14 @@ class Search extends React.Component {
     fetch(`${apiUrl}${this.state.query}`)
       .then(res => res.json())
       .then(json => {
+        console.log(json.drinks)
         if (json.drinks.length > 0) {
           const cocktail = json.drinks[0]
+          this.setState({ cocktail: cocktail, drinks: json.drinks })
+        } else if (json.drinks.length === 0) {
+          const cocktail = {
+            name: 'No such cocktail!'
+          }
           this.setState({ cocktail: cocktail, drinks: json.drinks })
         }
       })
@@ -50,31 +56,29 @@ class Search extends React.Component {
 
   render () {
     return (
-      <div className='container'>
-        <div className='searchContainer'>
-          <h1>What's your favourite cocktail?</h1>
-          <div className='search'>
-            <input className='input'
-              onKeyPress={this.handleKeyPress}
-              onChange={this.updateQuery}
-            /><br></br>
-            <button className='button' onClick={this.searchCocktails}>
+      <div className='searchContainer'>
+        <h1>What's your favourite cocktail?</h1>
+        <div className='search'>
+          <input className='input'
+            onKeyPress={this.handleKeyPress}
+            onChange={this.updateQuery}
+          /><br></br>
+          <button className='button' onClick={this.searchCocktails}>
             GO
-            </button>
-          </div>
-          <div className='random'>
-            <h3>Or...</h3>
-            <button onClick={this.randomCocktail}>
+          </button>
+        </div>
+        <div className='random'>
+          <h3>Or...</h3>
+          <button onClick={this.randomCocktail}>
             GET RANDOM COCKTAIL
-            </button>
-          </div>
-          <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
-          {/* <Route
+          </button>
+        </div>
+        <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
+        {/* <Route
           exact path='/cocktail'
           render={(state) =>
             <Cocktails {...state} cocktail={this.state.cocktail} />}
         /> */}
-        </div>
       </div>
     )
   }

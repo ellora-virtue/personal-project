@@ -1,16 +1,10 @@
 body {
   font-family: 'Girassol', cursive;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0;
+  margin: 0;
+  /* margin-left: auto;
+  margin-right: auto; */
   text-align: center;
-  height: 100vh;
-  width: 100vw;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  background-color: black;
-  background-image: url('./images/stainedBackground-1.jpg');
-  background-repeat: repeat-y;
-  background-size: cover;
 }
 
 .title {
@@ -18,19 +12,36 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 50vw;
-  margin-left: 25vw;
+  width: 100%;
 }
 
 .title h1 {
   margin-top: 25px;
 }
 
+#app {
+  background-color: black;
+}
+
 /* Styles cocktail page */
 .container {
+  margin: 0 10vw 0 10vw;
+  display: flex;
+  /* width: 100vw; */
+  box-sizing: border-box;
+  flex-direction: column;
+  background-image: url('./images/stainedBackground-1.jpg');
+  background-position-x: center;
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.bananas {
   display: flex;
   flex-direction: row;
-  width: 80vw;
+  margin: 10vh;
 }
 
 .image {
@@ -38,7 +49,7 @@ body {
 }
 
 .image img {
-  width: 80%;
+  width: 70%;
   margin-bottom: 20px
 }
 
@@ -52,6 +63,10 @@ body {
 #title {
   font-size: 30px;
   margin-bottom: 15px;
+}
+
+#cocktailName {
+  margin-top: 5vh;
 }
 
 .instructions {
@@ -70,8 +85,6 @@ body {
   width: 100%;
   text-align: center;
   margin: 0;
-  position: absolute;
-  top: 25%;
 }
 
 .searchContainer input {

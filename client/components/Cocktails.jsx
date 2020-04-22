@@ -40,34 +40,34 @@ class Cocktails extends React.Component {
         [x.strIngredient14, x.strMeasure14],
         [x.strIngredient15, x.strMeasure15]]
       return (
-      <>
-        <div><h1>{name}</h1></div>
-        <div className='container'>
-          <div className='image'>
-            <img src={image} alt={`image of a ${name}`} />
-          </div>
-          <div className='innerCont'>
-            <div className='ingredients'>
-              <span id='title'>Ingredients: </span>
-              <ul>
-                {ingredients.map((ingredient, idx) => {
-                  if (ingredient[0] !== null || ingredient[1] !== null) {
-                    return (
-                      <li key={idx}>
-                        <p>{ingredient[1]} {' '} {' '} {ingredient[0]}</p>
-                      </li>
-                    )
-                  }
-                })}
-              </ul>
+        <>
+          <div id='cocktailName'><h1>{name}</h1></div>
+          <div className='bananas'>
+            <div className='image'>
+              <img src={image} alt={`image of a ${name}`} />
             </div>
-            <div className='instructions'>
-              <span id='title'>Instructions: </span>
-              <div className='inner'>{instructions}</div>
+            <div className='innerCont'>
+              <div className='ingredients'>
+                <span id='title'>Ingredients: </span>
+                <ul>
+                  {ingredients.map((ingredient, idx) => {
+                    if (ingredient[0] !== null || ingredient[1] !== null) {
+                      return (
+                        <li key={idx}>
+                          <p>{ingredient[1]} {' '} {' '} {ingredient[0]}</p>
+                        </li>
+                      )
+                    }
+                  })}
+                </ul>
+              </div>
+              <div className='instructions'>
+                <span id='title'>Instructions: </span>
+                <div className='inner'>{instructions}</div>
+              </div>
             </div>
           </div>
-        </div>
-      </>
+        </>
       )
     }
   }
