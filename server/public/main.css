@@ -35,16 +35,17 @@ body {
 
 .swal-button {
   font-family: 'Girassol', cursive;
-  color: #c8ac7b;
+  color: white;
   background-color: #000000;
   border: none;
   border-radius: 2px;
   padding: 8px 5px;
 }
 
-.swal-button:hover {
-  background-color: #c8ac7b;
+.alert button.swal-button.swal-button--confirm:hover {
+  background-color: white;
   color: #000000;
+  transition-duration: 0.4s;
 }
 
 #app {
@@ -149,6 +150,7 @@ body {
   color: #000000;
   cursor: pointer;
   border: 1px solid #000000;
+  transition-duration: 0.4s;
 }
 
 .search button {
