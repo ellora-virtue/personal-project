@@ -1,3 +1,4 @@
+/* START GENERAL STYLING */
 body {
   font-family: 'Girassol', cursive;
   padding: 0;
@@ -5,6 +6,12 @@ body {
   text-align: center;
 }
 
+#app {
+  background-color: black;
+}
+/* END GENERAL STYLING */
+
+/* START TITLE STYLING */
 .title {
   font-size: 3em;
   display: flex;
@@ -16,8 +23,22 @@ body {
 .title h1 {
   margin-top: 25px;
   margin-bottom: 25px;
+  letter-spacing: 0.1em;
+  color: black;
 }
 
+.title a {
+  color: black;
+  text-decoration: none;
+}
+
+.title a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+/* END TITLE STYLING */
+
+/* START ALERT POP-UP STYLING */
 .alert {
   background-color: black;
 }
@@ -45,11 +66,9 @@ body {
   transition-duration: 0.4s;
 }
 
-#app {
-  background-color: black;
-}
+/* END ALERT POP-UP STYLING */
 
-/* Styles cocktail page */
+/* START COCKTAIL PAGE STYLING */
 .container {
   margin: 0 10vw 0 10vw;
   display: flex;
@@ -102,8 +121,9 @@ body {
 .instructions .inner {
   width: 70%;
 }
+/* END COCKTAIL PAGE STYLING */
 
-/* Styles search bar */
+/* START SEARCH BAR STYLING */
 .searchContainer {
   display: flex;
   flex-direction: column;
@@ -159,3 +179,4 @@ body {
   height: auto;
   font-size: 18px;
 }
+/* END SEARCH BAR STYLING */
