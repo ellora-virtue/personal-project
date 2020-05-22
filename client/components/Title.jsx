@@ -1,9 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Title = () => {
   return (
     <div className='title'>
-      <h1>High Spirits</h1>
+      <Link to='/'>
+        <h1>High Spirits</h1>
+      </Link>
     </div>
   )
 }
