@@ -1,15 +1,17 @@
 import React from 'react'
-// import { Route } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 
 import Title from './Title'
 import Search from './Search'
 
 const App = () => {
   return (
-    <div className='container'>
-      <Title />
-      <Search />
-    </div>
+    <Router>
+      <div className='container'>
+        <Title />
+        <Search />
+      </div>
+    </Router>
   )
 }
 
