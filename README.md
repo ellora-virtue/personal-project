@@ -1,28 +1,18 @@
-# A starter webpack project for React
+# High Spirits
 
-This is a starter project that uses webpack to transpile and bundle ES6 React code. To use, consider these steps:
+## To begin...
 
-* Fork this repo
-* Rename your repo according to the app you're building
+Clone down the repo, then:
 
 ```sh
-git clone https://github.com/[your-account]/[your-app].git
-cd [your-app] && npm i
+npm install
+npm run dev
 ```
 
-To start the development server with a watcher that rebuilds your code, run `npm run dev`. The assets built by webpack are placed in `server/public`. This folder is defined as a static folder in an Express.js server that can be started with `npm run server`.
+## Info
 
-Additional components should be placed in `client/components`.
+This was originally developed as a personal project for Enspiral Dev Academy. As we had a limited time to complete it, there were many goals I did not achieve and am therefore continuing developing this app. Stay tuned!
 
-## Separate client/server
+## Made by:
 
-The boilerplate is also set up to host the client using `webpack-dev-server` with hot module reloading etc. To use this method, in one terminal run:
-```sh
-npm run client
-```
-and in the other:
-```sh
-npm run server
-```
-The client will be available on http://localhost:8080 and the server on http://localhost:3000. Note that you will still need to manage CORS between the two, as they are on different ports.
-
+#### Ellora Virtue
