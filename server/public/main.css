@@ -163,6 +163,10 @@ body {
   padding: 8px 5px;
 }
 
+.cocktail button {
+  margin: 0 2vw;
+}
+
 .searchContainer button:hover,
 .cocktail button:hover {
   background-color: #c8ac7b;
