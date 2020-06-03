@@ -25,6 +25,7 @@ body {
   margin-bottom: 3vh;
   letter-spacing: 0.1em;
   color: black;
+  cursor: pointer;
 }
 
 .title a {
@@ -67,6 +68,18 @@ body {
 }
 
 /* END ALERT POP-UP STYLING */
+
+/* START SEARCH RESULTS STYLING */
+.search-results {
+  text-align: left;
+  margin-left: 20vw;
+}
+
+.search-results img {
+  width: 5vw;
+  height: auto;
+}
+/* END SEARCH RESULTS STYLING */
 
 /* START COCKTAIL PAGE STYLING */
 .container {

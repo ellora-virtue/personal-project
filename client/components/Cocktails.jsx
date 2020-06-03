@@ -44,7 +44,7 @@ class Cocktails extends React.Component {
           <div id='cocktailName'><h1>{name}</h1></div>
           <div className='outerContainer'>
             <div className='image'>
-              <img src={image} alt={`image of a ${name}`} />
+              <img src={image} alt={`${name}`} />
             </div>
             <div className='innerCont'>
               <div className='ingredients'>

@@ -1,8 +1,8 @@
 import React from 'react'
 import swal from '@sweetalert/with-react'
-import { Route, Link } from 'react-router-dom'
 
 import Cocktails from './Cocktails'
+import SearchResults from './SearchResults'
 
 const apiUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 
@@ -83,17 +83,24 @@ class Search extends React.Component {
           </div>
         </div>
       )
+    } else if (this.state.drinks.length === 1) {
+      return (
+        <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
+      )
     } else {
       return (
-        <div className='cocktail'>
-          <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
-          <button onClick={this.refreshPage}>
-            BACK TO SEARCH
-          </button>
-          <button onClick={this.randomCocktail}>
-            GET RANDOM COCKTAIL
-          </button>
+        <div>
+          <SearchResults drinks={this.state.drinks} />
         </div>
+        // <div className='cocktail'>
+        //   <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
+        //   <button onClick={this.refreshPage}>
+        //     BACK TO SEARCH
+        //   </button>
+        //   <button onClick={this.randomCocktail}>
+        //     GET RANDOM COCKTAIL
+        //   </button>
+        // </div>
       )
     }
   }
