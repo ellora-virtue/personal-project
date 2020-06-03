@@ -81,7 +81,12 @@ class Search extends React.Component {
       )
     } else {
       return (
-        <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
+        <div className='cocktail'>
+          <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
+          <button onClick={this.randomCocktail}>
+            GET RANDOM COCKTAIL
+          </button>
+        </div>
       )
     }
   }
