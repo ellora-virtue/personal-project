@@ -88,7 +88,7 @@ class Search extends React.Component {
         <div className='cocktail'>
           <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
           <button onClick={this.refreshPage}>
-            SEARCH AGAIN
+            BACK TO SEARCH
           </button>
           <button onClick={this.randomCocktail}>
             GET RANDOM COCKTAIL
