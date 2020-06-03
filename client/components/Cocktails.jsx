@@ -42,7 +42,7 @@ class Cocktails extends React.Component {
       return (
         <>
           <div id='cocktailName'><h1>{name}</h1></div>
-          <div className='bananas'>
+          <div className='outerContainer'>
             <div className='image'>
               <img src={image} alt={`image of a ${name}`} />
             </div>
