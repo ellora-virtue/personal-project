@@ -49,7 +49,7 @@ class Cocktails extends React.Component {
             <div className='innerCont'>
               <div className='ingredients'>
                 <span id='title'>Ingredients: </span>
-                <ul>
+                <ul id='ingredients'>
                   {ingredients.map((ingredient, idx) => {
                     if (ingredient[0] !== null || ingredient[1] !== null) {
                       return (
@@ -60,10 +60,10 @@ class Cocktails extends React.Component {
                     }
                   })}
                 </ul>
-              </div>
+              </div> 
               <div className='instructions'>
                 <span id='title'>Instructions: </span>
-                <div className='inner'>{instructions}</div>
+                <div id='instructions'className='inner'>{instructions}</div>
               </div>
             </div>
           </div>
