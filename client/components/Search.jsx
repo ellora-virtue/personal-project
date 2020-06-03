@@ -1,6 +1,6 @@
 import React from 'react'
 import swal from '@sweetalert/with-react'
-import { Route } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 
 import Cocktails from './Cocktails'
 
@@ -57,6 +57,10 @@ class Search extends React.Component {
       .catch(error => console.log(error.message))
   }
 
+  refreshPage = () => {
+    window.location.reload(false)
+  }
+
   render () {
     if (this.state.cocktail === null) {
       return (
@@ -83,6 +87,9 @@ class Search extends React.Component {
       return (
         <div className='cocktail'>
           <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
+          <button onClick={this.refreshPage}>
+            SEARCH AGAIN
+          </button>
           <button onClick={this.randomCocktail}>
             GET RANDOM COCKTAIL
           </button>
