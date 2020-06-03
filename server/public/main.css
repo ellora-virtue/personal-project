@@ -21,8 +21,8 @@ body {
 }
 
 .title h1 {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
   letter-spacing: 0.1em;
   color: black;
 }
@@ -71,6 +71,7 @@ body {
 /* START COCKTAIL PAGE STYLING */
 .container {
   margin: 0 10vw 0 10vw;
+  padding-bottom: 5vh;
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
@@ -152,7 +153,8 @@ body {
   width: 15em;
 }
 
-.searchContainer button {
+.searchContainer button,
+.cocktail button {
   font-family: 'Girassol', cursive;
   background-color: #000000;
   color: #c8ac7b;
@@ -161,7 +163,8 @@ body {
   padding: 8px 5px;
 }
 
-.searchContainer button:hover {
+.searchContainer button:hover,
+.cocktail button:hover {
   background-color: #c8ac7b;
   color: #000000;
   cursor: pointer;
@@ -174,7 +177,8 @@ body {
   font-size: 20px;
 }
 
-.random button {
+.random button,
+.cocktail button {
   width: 15em;
   height: auto;
   font-size: 18px;
