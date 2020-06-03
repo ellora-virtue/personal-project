@@ -1,12 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const Title = () => {
+  const refreshPage = () => {
+    window.location.reload(false)
+  }
+
   return (
     <div className='title'>
-      <Link to='/'>
-        <h1>High Spirits</h1>
-      </Link>
+      <h1 onClick={refreshPage}>High Spirits</h1>
     </div>
   )
 }
