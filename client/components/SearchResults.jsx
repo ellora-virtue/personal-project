@@ -11,29 +11,44 @@ class SearchResults extends React.Component {
     }
   }
 
+  refreshPage = () => {
+    window.location.reload(false)
+  }
+
   renderRecipe = () => {
     // if (name === this.state.drinks.strDrink) {
-      console.log(name)
+    console.log(name)
     // }
   }
 
   render () {
     return (
       <div className='search-results'>
+        <h1 id='results-title'>Search results</h1>
+        
         <ul>
           {this.state.drinks.map((drink, idx) => {
-            const { strDrinkThumb: image, strDrink: name, strAlcoholic: alcoholic } = drink
+            const { strDrinkThumb: image, strDrink: name, strIngredient1, strIngredient2, strIngredient3 } = drink
             return (
               <li key={idx}>
-                <img src={image} alt={`${name}`} />
-                <Link to={`/cocktail/${name}`}>
-                  <h3 onClick={this.renderRecipe}>{name}</h3>
-                </Link>
-                <p>({alcoholic})</p>
+                <div className='result'>
+                  <img src={image} alt={`${name}`} />
+                  <div className='inner-result'>
+                    <Link to={`/cocktail/${name}`}>
+                      <h2 onClick={this.renderRecipe}>{name}</h2>
+                    </Link>
+                    <p>Ingredients: {strIngredient1}, {strIngredient2}, {strIngredient3}...</p>
+                  </div>
+                </div>
               </li>
             )
           })}
         </ul>
+        <div className='cocktail'>
+          <button onClick={this.refreshPage}>
+            BACK TO SEARCH
+          </button>
+        </div>
       </div>
     )
   }
