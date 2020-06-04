@@ -85,7 +85,15 @@ class Search extends React.Component {
       )
     } else if (this.state.drinks.length === 1) {
       return (
-        <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
+        <div className='cocktail'>
+          <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
+          <button onClick={this.refreshPage}>
+          BACK TO SEARCH
+          </button>
+          <button onClick={this.randomCocktail}>
+          GET RANDOM COCKTAIL
+          </button>
+        </div>
       )
     } else {
       return (
