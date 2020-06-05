@@ -16,6 +16,10 @@ class Cocktails extends React.Component {
     }
   }
 
+  refreshPage = () => {
+    window.location.reload(false)
+  }
+
   render () {
     if (!this.state.drinks || !this.state.cocktail) {
       return null
@@ -59,12 +63,17 @@ class Cocktails extends React.Component {
                     }
                   })}
                 </ul>
-              </div> 
+              </div>
               <div className='instructions'>
                 <span id='title'>Instructions: </span>
                 <div id='instructions'className='inner'>{instructions}</div>
               </div>
             </div>
+          </div>
+          <div className='cocktail'>
+            <button onClick={this.refreshPage}>
+            BACK TO SEARCH
+            </button>
           </div>
         </>
       )
