@@ -20,7 +20,6 @@ class Cocktails extends React.Component {
     if (!this.state.drinks || !this.state.cocktail) {
       return null
     } else {
-      // const drinks = this.state.drinks
       const x = this.state.cocktail
       const { strDrink: name, strInstructions: instructions, strDrinkThumb: image } = x
       const ingredients = [
