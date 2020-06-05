@@ -106,6 +106,15 @@ body {
   flex-direction: row;
 }
 
+.result img {
+  cursor: pointer;
+}
+
+.result h2 {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .inner-result {
   display: flex;
   flex-direction: column;
