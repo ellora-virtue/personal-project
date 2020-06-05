@@ -91,7 +91,7 @@ class Search extends React.Component {
           BACK TO SEARCH
           </button>
           <button onClick={this.randomCocktail}>
-          GET RANDOM COCKTAIL
+          RANDOM COCKTAIL
           </button>
         </div>
       )
