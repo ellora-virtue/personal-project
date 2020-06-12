@@ -133,7 +133,7 @@ body {
 /* START COCKTAIL PAGE STYLING */
 .container {
   margin: 0 10vw 0 10vw;
-  padding-bottom: 5vh;
+  padding-bottom: 10vh;
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
